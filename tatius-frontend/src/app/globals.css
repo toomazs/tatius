@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #ffffff;
+  --color-foreground: #3e3e3e;
+
+  /* Cores oficiais da identidade TATIUS (do PDF) */
+  --color-tatius-orange: #ee8f4b;
+  --color-tatius-green: #a1ce67;
+  --color-tatius-skyblue: #d6e7f4;
+  --color-tatius-lilac: #ce9fe2;
+  --color-tatius-coral: #ff616e;
+  --color-tatius-cream: #efe8d8;
+  --color-tatius-royal: #173d95;
+  --color-tatius-brown: #7f3717;
+  --color-tatius-graphite: #3e3e3e;
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-tatius-graphite);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
